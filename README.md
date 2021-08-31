@@ -1,7 +1,8 @@
 # 🏪 Straightforward Store API
 
 ## Description
-This is API for stores management with only 3 entity`Store`, `Item` and `User`.
+This is API for stores management with 3 entities `Store`, `Item` and `User`.
+This application authenticates with JWT as an access token as well as a refresh token and blocklist.
 
 ## Technology
 - Backend
