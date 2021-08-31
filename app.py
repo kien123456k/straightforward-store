@@ -1,5 +1,6 @@
 import os
 from blocklist import BLOCKLIST
+from db import db
 
 from flask import Flask, jsonify
 from flask_restful import Api
@@ -86,10 +87,9 @@ api.add_resource(UserLogin, "/login")
 api.add_resource(UserLogout, "/logout")
 api.add_resource(TokenRefresh, "/refresh")
 
-if __name__ == "__main__":
-    from db import db
-    db.init_app(app)
+db.init_app(app)
 
+if __name__ == "__main__":
     @app.before_first_request
     def create_tables():
         db.create_all()
